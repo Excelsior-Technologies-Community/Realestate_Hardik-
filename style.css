@@ -1,0 +1,170 @@
+/* Navbar ko space dene ke liye */
+.navbar {
+    padding: 10px 20px !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Logo size adjust karne ke liye */
+.navbar-brand img {
+    height: 30px;
+}
+
+/* Search Bar styling like image */
+.search-container {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.custom-search {
+    background-color: #f2f5f7 !important;
+    border: 1px solid #e6e9ec !important;
+    border-radius: 6px !important;
+    padding-right: 35px !important;
+    font-size: 14px;
+}
+
+.search-icon-inside {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    pointer-events: none;
+}
+
+/* Nav links styling */
+.nav-link {
+    color: #333 !important;
+    font-size: 14px !important;
+    font-weight: 500;
+}
+
+/* User, Lang, Currency buttons styling */
+.navbar-nav .dropdown-toggle {
+    border: 1px solid #e6e9ec;
+    border-radius: 5px;
+    padding: 5px 12px !important;
+    margin: 0 5px;
+}
+
+
+.cart-box-wrapper {
+    margin-left: 10px;
+}
+
+.cart-link {
+    background-color: #65c1ec;
+    color: white !important;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 10px;
+}
+
+/* Responsive Fixes */
+
+@media (max-width: 991.98px) {
+
+    .search-container {
+        width: 100% !important;
+        margin: 10px 0 !important;
+    }
+
+
+    .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .navbar-nav .dropdown-toggle {
+        margin: 5px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+
+    .cart-box-wrapper {
+        margin: 10px 0;
+        display: inline-block;
+    }
+}
+
+
+.navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+/* Mega Menu Full Width Styling */
+.navbar .has-megamenu {
+    position: static !important;
+}
+
+.navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+    padding: 25px;
+    border: none;
+    border-top: 1px solid #eee;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Mega Menu Links styling */
+.megamenu h6.title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #1a202c;
+}
+
+.megamenu ul li {
+    margin-bottom: 8px;
+}
+
+.megamenu ul li a {
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.megamenu ul li a:hover {
+    color: #65c1ec;
+    
+    padding-left: 5px;
+}
+
+/* Image styling inside menu */
+.megamenu-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .navbar .megamenu {
+        position: relative !important;
+        padding: 15px;
+    }
+}
