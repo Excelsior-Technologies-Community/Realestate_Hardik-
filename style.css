@@ -1,16 +1,42 @@
-/* Navbar ko space dene ke liye */
+
 .navbar {
     padding: 10px 20px !important;
     background-color: #ffffff !important;
     border-bottom: 1px solid #e9ecef;
 }
 
-/* Logo size adjust karne ke liye */
+
+.navbar-collapse {
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    margin-left: auto !important; 
+    gap: 5px; 
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+#langDropdown::after, 
+#currDropdown::after {
+    display: inline-block !important; 
+    vertical-align: middle !important;
+    margin-left: 8px !important;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+
 .navbar-brand img {
     height: 30px;
 }
 
-/* Search Bar styling like image */
+
 .search-container {
     width: 300px;
     margin-right: 20px;
@@ -33,14 +59,13 @@
     pointer-events: none;
 }
 
-/* Nav links styling */
 .nav-link {
     color: #333 !important;
     font-size: 14px !important;
     font-weight: 500;
 }
 
-/* User, Lang, Currency buttons styling */
+
 .navbar-nav .dropdown-toggle {
     border: 1px solid #e6e9ec;
     border-radius: 5px;
@@ -77,7 +102,7 @@
     border-radius: 10px;
 }
 
-/* Responsive Fixes */
+
 
 @media (max-width: 991.98px) {
 
@@ -114,7 +139,7 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
-/* Mega Menu Full Width Styling */
+
 .navbar .has-megamenu {
     position: static !important;
 }
@@ -130,7 +155,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Mega Menu Links styling */
+
 .megamenu h6.title {
     margin-bottom: 15px;
     font-size: 16px;
@@ -154,17 +179,147 @@
     padding-left: 5px;
 }
 
-/* Image styling inside menu */
+
 .megamenu-img img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-/* Mobile Adjustments */
+
 @media (max-width: 991px) {
     .navbar .megamenu {
         position: relative !important;
         padding: 15px;
     }
+}
+
+
+/* Shop Mega Menu Specific Styling */
+.shop-card {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+}
+
+.shop-img-wrapper img {
+    width: 100%;
+    height: 160px; 
+    object-fit: cover;
+    border-radius: 12px !important; 
+}
+
+.shop-card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 0;
+}
+
+
+@media (min-width: 992px) {
+    .navbar .megamenu {
+        padding: 30px 60px !important; 
+    }
+}
+
+/* Pages Dropdown Specific Styling */
+.custom-pages-dropdown {
+    padding: 15px 0;
+    border-radius: 12px !important; 
+    min-width: 200px;
+}
+
+.custom-pages-dropdown .dropdown-item {
+    padding: 8px 25px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.custom-pages-dropdown .dropdown-item:hover {
+    background-color: transparent;
+    color: #65c1ec; 
+}
+
+
+.nav-link.active-page {
+    border-bottom: 2px solid #65c1ec;
+    color: #65c1ec !important;
+}
+
+
+
+.profile-custom-dropdown {
+    padding: 10px 0;
+    border-radius: 12px !important;
+    min-width: 180px;
+    margin-top: 10px !important;
+    transform: translateX(-20px) !important; 
+    left: auto !important;
+    right: 0 !important;
+}
+
+.profile-custom-dropdown .dropdown-item {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.profile-custom-dropdown .dropdown-item:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+/* Tooltip Styling (Hover effect) */
+.tooltip-inner {
+    background-color: #fff !important;
+    color: #795548 !important; 
+    border: 1px solid #333;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #333 !important;
+}
+
+
+/* Dropdown Toggle Buttons (Main Menu) */
+.navbar-nav .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e6e9ec;
+    border-radius: 6px;
+    padding: 6px 15px !important;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Menu Box */
+.custom-dropdown-style {
+    border-radius: 10px !important;
+    padding: 10px 0;
+    margin-top: 12px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Icons inside dropdown items */
+.dropdown-item i {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #65c1ec !important; 
+}
+
+/* Aligning the icons properly */
+.me-2 {
+    margin-right: 0.5rem !important;
 }

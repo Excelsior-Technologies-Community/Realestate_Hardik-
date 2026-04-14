@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="images/logo.webp"><img src="images/logo.webp" alt="Realestate_logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -30,7 +30,7 @@
                     </form>
 
 
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item dropdown has-megamenu">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 Main Page
@@ -76,84 +76,120 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                        <li class="nav-item dropdown has-megamenu">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 Shop
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                            <div class="dropdown-menu megamenu" role="menu">
+                                <div class="container-fluid">
+                                    <div class="row g-4">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="shop-card text-center">
+                                                <div class="shop-img-wrapper">
+                                                    <img src="images/menu-1.avif" class="img-fluid rounded"
+                                                        alt="Bestseller">
+                                                </div>
+                                                <p class="mt-2 fw-bold">Bestseller</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="shop-card text-center">
+                                                <div class="shop-img-wrapper">
+                                                    <img src="images/menu-2.avif" class="img-fluid rounded"
+                                                        alt="Farm Vila">
+                                                </div>
+                                                <p class="mt-2 fw-bold">Farm Vila</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="shop-card text-center">
+                                                <div class="shop-img-wrapper">
+                                                    <img src="images/menu-3.avif" class="img-fluid rounded"
+                                                        alt="Luxury Properties">
+                                                </div>
+                                                <p class="mt-2 fw-bold">Luxury Properties</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="shop-card text-center">
+                                                <div class="shop-img-wrapper">
+                                                    <img src="images/menu-4.avif" class="img-fluid rounded"
+                                                        alt="Royal House">
+                                                </div>
+                                                <p class="mt-2 fw-bold">Royal House</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Offers</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Offers
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu shadow-sm border-0 custom-pages-dropdown"
+                                aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="#">About us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact us</a></li>
+                                <li><a class="dropdown-item" href="#">Faq's</a></li>
+                                <li><a class="dropdown-item" href="#">Article Page</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Page</a></li>
+                                <li><a class="dropdown-item" href="#">Category Page</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <a class="nav-link dropdown-toggle profile-dropdown-btn" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-placement="bottom"
+                                title="my profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-person" viewBox="0 0 16 16">
                                     <path
                                         d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                                 </svg>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu shadow-sm border-0 profile-custom-dropdown">
+                                <li><a class="dropdown-item" href="#">Log in</a></li>
+                                <li><a class="dropdown-item" href="#">Create Account</a></li>
+                                <li><a class="dropdown-item" href="#">Wishlist (0)</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="langDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="images/usa.png" alt="" class="me-2"> English
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                            <ul class="dropdown-menu shadow-sm border-0 custom-dropdown-style"
+                                aria-labelledby="langDropdown">
+                                <li><a class="dropdown-item" href="#"><img src="images/usa.png" alt="" class="me-2">
+                                        English</a></li>
+                                <li><a class="dropdown-item" href="#"><img src="images/india.png" alt="" class="me-2">
+                                        Hindi</a></li>
+                                <li><a class="dropdown-item" href="#"><img src="images/united-arab-emirates.png" alt=""
+                                            class="me-2"> Arabic</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="currDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-currency-dollar me-1"></i> USD
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
+                            <ul class="dropdown-menu shadow-sm border-0 custom-dropdown-style"
+                                aria-labelledby="currDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-currency-dollar me-2"></i> USD</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-currency-rupee me-2"></i> INR</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-currency-euro me-2"></i> EUR</a>
+                                </li>
                             </ul>
                         </li>
 
