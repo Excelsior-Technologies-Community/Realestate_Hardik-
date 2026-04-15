@@ -344,3 +344,16 @@ header {
         padding: 30px 60px !important;
     }
 }
+/* Container Fluid ko full width karke side padding dene ke liye */
+.custom-container {
+    padding-left: 153px !important;
+    padding-right: 80px !important;
+}
+
+/* Responsive adjustment: Choti screen par padding kam kar dein */
+@media (max-width: 991px) {
+    .custom-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
