@@ -15,15 +15,41 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
+            <div class="container navbar-shell">
                 <a class="navbar-brand" href="images/logo.webp"><img src="images/logo.webp" alt="Realestate_logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <form class="d-flex position-relative search-container compact-search-container" role="search"
+                    id="compactSearchForm" data-compact-search>
+                    <input class="form-control custom-search" type="search" placeholder="Search Product..."
+                        aria-label="Search" data-compact-search-input />
+                    <i class="bi bi-search search-icon-inside"></i>
+                </form>
+                <div class="compact-actions">
+                    <button class="utility-icon-btn compact-search-toggle" type="button" aria-label="Open search"
+                        aria-expanded="false" aria-controls="compactSearchForm" data-search-toggle>
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <div class="dropdown compact-profile-dropdown">
+                        <a class="utility-icon-btn" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" title="My profile" aria-label="My profile">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <ul class="dropdown-menu shadow-sm border-0 profile-custom-dropdown">
+                            <li><a class="dropdown-item" href="#">Log in</a></li>
+                            <li><a class="dropdown-item" href="#">Create Account</a></li>
+                            <li><a class="dropdown-item" href="#">Wishlist (0)</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="cart-link compact-cart-link" aria-label="Cart" data-cart-toggle>
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-badge">0</span>
+                    </a>
+                    <button class="navbar-toggler compact-menu-toggle" type="button" aria-controls="mobileMenuDrawer"
+                        aria-expanded="false" aria-label="Open menu" data-menu-toggle>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="d-flex position-relative search-container" role="search">
+                    <form class="d-flex position-relative search-container desktop-search-container" role="search">
                         <input class="form-control custom-search" type="search" placeholder="Search Product..."
                             aria-label="Search" />
                         <i class="bi bi-search search-icon-inside"></i>
@@ -160,43 +186,79 @@
                                 <li><a class="dropdown-item" href="#">Wishlist (0)</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="langDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="images/usa.png" alt="" class="me-2"> English
-                            </a>
-
-                            <ul class="dropdown-menu shadow-sm border-0 custom-dropdown-style"
-                                aria-labelledby="langDropdown">
-                                <li><a class="dropdown-item" href="#"><img src="images/usa.png" alt="" class="me-2">
-                                        English</a></li>
-                                <li><a class="dropdown-item" href="#"><img src="images/india.png" alt="" class="me-2">
-                                        Hindi</a></li>
-                                <li><a class="dropdown-item" href="#"><img src="images/united-arab-emirates.png" alt=""
-                                            class="me-2"> Arabic</a></li>
-                            </ul>
+                        <li class="nav-item nav-select-item">
+                            <div class="menu-select nav-toolbar-select" data-menu-select data-menu-select-group="language">
+                                <button class="menu-select-toggle" type="button" aria-expanded="false"
+                                    data-menu-select-toggle>
+                                    <span class="menu-select-current">
+                                        <img src="images/usa.png" alt="English" class="menu-filter-flag"
+                                            data-menu-select-image>
+                                        <span data-menu-select-label>English</span>
+                                    </span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </button>
+                                <div class="menu-select-menu">
+                                    <button class="menu-select-option menu-select-option-active" type="button"
+                                        data-menu-option data-menu-value="english" data-menu-label="English"
+                                        data-menu-image="images/usa.png">
+                                        <img src="images/usa.png" alt="English" class="menu-filter-flag">
+                                        <span>English</span>
+                                    </button>
+                                    <button class="menu-select-option" type="button" data-menu-option
+                                        data-menu-value="hindi" data-menu-label="Hindi"
+                                        data-menu-image="images/india.png">
+                                        <img src="images/india.png" alt="Hindi" class="menu-filter-flag">
+                                        <span>Hindi</span>
+                                    </button>
+                                    <button class="menu-select-option" type="button" data-menu-option
+                                        data-menu-value="arabic" data-menu-label="Arabic"
+                                        data-menu-image="images/united-arab-emirates.png">
+                                        <img src="images/united-arab-emirates.png" alt="Arabic"
+                                            class="menu-filter-flag">
+                                        <span>Arabic</span>
+                                    </button>
+                                </div>
+                            </div>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="currDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-currency-dollar me-1"></i> USD
-                            </a>
-                            <ul class="dropdown-menu shadow-sm border-0 custom-dropdown-style"
-                                aria-labelledby="currDropdown">
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-currency-dollar me-2"></i> USD</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-currency-rupee me-2"></i> INR</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-currency-euro me-2"></i> EUR</a>
-                                </li>
-                            </ul>
+                        <li class="nav-item nav-select-item">
+                            <div class="menu-select nav-toolbar-select" data-menu-select data-menu-select-group="currency">
+                                <button class="menu-select-toggle" type="button" aria-expanded="false"
+                                    data-menu-select-toggle>
+                                    <span class="menu-select-current">
+                                        <i class="bi bi-currency-dollar menu-filter-currency-icon"
+                                            data-menu-select-icon></i>
+                                        <span data-menu-select-label>USD</span>
+                                    </span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </button>
+                                <div class="menu-select-menu">
+                                    <button class="menu-select-option menu-select-option-active" type="button"
+                                        data-menu-option data-menu-value="usd" data-menu-label="USD"
+                                        data-menu-icon="bi bi-currency-dollar">
+                                        <i class="bi bi-currency-dollar menu-filter-currency-icon"></i>
+                                        <span>USD</span>
+                                    </button>
+                                    <button class="menu-select-option" type="button" data-menu-option
+                                        data-menu-value="inr" data-menu-label="INR"
+                                        data-menu-icon="bi bi-currency-rupee">
+                                        <i class="bi bi-currency-rupee menu-filter-currency-icon"></i>
+                                        <span>INR</span>
+                                    </button>
+                                    <button class="menu-select-option" type="button" data-menu-option
+                                        data-menu-value="eur" data-menu-label="EUR"
+                                        data-menu-icon="bi bi-currency-euro">
+                                        <i class="bi bi-currency-euro menu-filter-currency-icon"></i>
+                                        <span>EUR</span>
+                                    </button>
+                                </div>
+                            </div>
                         </li>
 
 
                     </ul>
-                    <div class="cart-box-wrapper">
-                        <a href="#" class="cart-link">
+                    <div class="cart-box-wrapper desktop-cart-wrapper">
+                        <a href="#" class="cart-link" data-cart-toggle>
                             <i class="bi bi-cart3"></i>
                             <span class="cart-badge">0</span>
                         </a>
@@ -207,7 +269,7 @@
 
         <div class="sub-header-container border-bottom border-top">
             <div class="container-fluid custom-container">
-                <div class="row g-0 flex-nowrap overflow-auto hide-scrollbar">
+                <div class="row g-0 m-0 flex-nowrap overflow-auto hide-scrollbar">
                     <div class="col-auto sub-header-item border-end py-3 px-4 d-flex align-items-center">
                         <i class="bi bi-building fs-4 me-2"></i>
                         <div class="lh-sm">
@@ -260,13 +322,137 @@
             </div>
         </div>
     </header>
+
+    <div class="menu-drawer-backdrop" data-menu-close></div>
+
+    <aside class="menu-drawer" id="mobileMenuDrawer" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="mobileMenuTitle">
+        <div class="menu-drawer-topbar">
+            <button class="menu-drawer-close" type="button" aria-label="Close menu" data-menu-close>
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="menu-drawer-body">
+            <div class="menu-drawer-filters">
+                <div class="menu-select" data-menu-select data-menu-select-group="language">
+                    <button class="menu-select-toggle" type="button" aria-expanded="false" data-menu-select-toggle>
+                        <span class="menu-select-current">
+                            <img src="images/usa.png" alt="English" class="menu-filter-flag" data-menu-select-image>
+                            <span data-menu-select-label>English</span>
+                        </span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="menu-select-menu">
+                        <button class="menu-select-option menu-select-option-active" type="button" data-menu-option
+                            data-menu-value="english" data-menu-label="English" data-menu-image="images/usa.png">
+                            <img src="images/usa.png" alt="English" class="menu-filter-flag">
+                            <span>English</span>
+                        </button>
+                        <button class="menu-select-option" type="button" data-menu-option data-menu-value="hindi"
+                            data-menu-label="Hindi" data-menu-image="images/india.png">
+                            <img src="images/india.png" alt="Hindi" class="menu-filter-flag">
+                            <span>Hindi</span>
+                        </button>
+                        <button class="menu-select-option" type="button" data-menu-option data-menu-value="arabic"
+                            data-menu-label="Arabic" data-menu-image="images/united-arab-emirates.png">
+                            <img src="images/united-arab-emirates.png" alt="Arabic" class="menu-filter-flag">
+                            <span>Arabic</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-select" data-menu-select data-menu-select-group="currency">
+                    <button class="menu-select-toggle" type="button" aria-expanded="false" data-menu-select-toggle>
+                        <span class="menu-select-current">
+                            <i class="bi bi-currency-dollar menu-filter-currency-icon" data-menu-select-icon></i>
+                            <span data-menu-select-label>USD</span>
+                        </span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="menu-select-menu">
+                        <button class="menu-select-option menu-select-option-active" type="button" data-menu-option
+                            data-menu-value="usd" data-menu-label="USD" data-menu-icon="bi bi-currency-dollar">
+                            <i class="bi bi-currency-dollar menu-filter-currency-icon"></i>
+                            <span>USD</span>
+                        </button>
+                        <button class="menu-select-option" type="button" data-menu-option data-menu-value="inr"
+                            data-menu-label="INR" data-menu-icon="bi bi-currency-rupee">
+                            <i class="bi bi-currency-rupee menu-filter-currency-icon"></i>
+                            <span>INR</span>
+                        </button>
+                        <button class="menu-select-option" type="button" data-menu-option data-menu-value="eur"
+                            data-menu-label="EUR" data-menu-icon="bi bi-currency-euro">
+                            <i class="bi bi-currency-euro menu-filter-currency-icon"></i>
+                            <span>EUR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="menu-drawer-nav" aria-labelledby="mobileMenuTitle">
+                <h2 class="visually-hidden" id="mobileMenuTitle">Mobile menu</h2>
+
+                <div class="menu-group" data-menu-group>
+                    <button class="menu-group-toggle" type="button" data-menu-group-toggle>
+                        <span>Shop All</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                    <div class="menu-group-links">
+                        <a href="#" class="menu-drawer-link" data-menu-close>Bestseller</a>
+                        <a href="#" class="menu-drawer-link" data-menu-close>Farm Vila</a>
+                        <a href="#" class="menu-drawer-link" data-menu-close>Luxury Properties</a>
+                        <a href="#" class="menu-drawer-link" data-menu-close>Royal House</a>
+                    </div>
+                </div>
+
+                <div class="menu-group" data-menu-group>
+                    <button class="menu-group-toggle" type="button" data-menu-group-toggle>
+                        <span>Blog</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                    <div class="menu-group-links">
+                        <a href="#" class="menu-drawer-link" data-menu-close>Article Page</a>
+                        <a href="#" class="menu-drawer-link" data-menu-close>Blog Page</a>
+                    </div>
+                </div>
+
+                <a href="#" class="menu-drawer-link menu-drawer-link-strong" data-menu-close>Contact us</a>
+                <a href="#" class="menu-drawer-link menu-drawer-link-strong" data-menu-close>About Us</a>
+                <a href="#" class="menu-drawer-link menu-drawer-link-strong" data-menu-close>Faq's</a>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="cart-drawer-backdrop" data-cart-close></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="cartDrawerTitle">
+        <div class="cart-drawer-header">
+            <button class="cart-drawer-close" type="button" aria-label="Close cart" data-cart-close>
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <h2 class="cart-drawer-title" id="cartDrawerTitle">My Cart</h2>
+            <span class="cart-drawer-count" data-cart-count>0 ITEMS</span>
+        </div>
+        <div class="cart-drawer-body">
+            <div class="cart-empty-state">
+                <i class="bi bi-cart-x cart-empty-icon"></i>
+                <p class="cart-empty-text">Your cart is empty</p>
+                <button class="cart-continue-btn" type="button" data-cart-close>
+                    <i class="bi bi-arrow-left"></i>
+                    Continue shopping
+                </button>
+            </div>
+        </div>
+    </aside>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
